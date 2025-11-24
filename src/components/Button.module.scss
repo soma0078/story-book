@@ -1,0 +1,54 @@
+$primary-color: #555ab9;
+$secondary-color: transparent;
+$text-color: #333;
+$white: white;
+$box-shadow-secondary: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+
+$font-size-small: 12px;
+$font-size-medium: 14px;
+$font-size-large: 16px;
+
+$padding-small: 10px 16px;
+$padding-medium: 11px 20px;
+$padding-large: 12px 24px;
+
+$border-radius: 3em;
+$font-family-base: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+.button {
+  display: inline-block;
+  cursor: pointer;
+  border: 0;
+  border-radius: $border-radius;
+  font-weight: 700;
+  line-height: 1;
+  font-family: $font-family-base;
+
+  // Variants
+  &--primary {
+    background-color: $primary-color;
+    color: $white;
+  }
+
+  &--secondary {
+    box-shadow: $box-shadow-secondary;
+    background-color: $secondary-color;
+    color: $text-color;
+  }
+
+  // Sizes
+  &--small {
+    padding: $padding-small;
+    font-size: $font-size-small;
+  }
+
+  &--medium {
+    padding: $padding-medium;
+    font-size: $font-size-medium;
+  }
+
+  &--large {
+    padding: $padding-large;
+    font-size: $font-size-large;
+  }
+}

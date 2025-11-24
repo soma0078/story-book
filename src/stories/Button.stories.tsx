@@ -13,11 +13,22 @@ const meta = {
   tags: ["autodocs"],
   // More on argTypes: https://storybook.js.org/docs/api/argtypes
   argTypes: {
+    variant: {
+      control: { type: 'radio' },
+      options: ['primary', 'secondary'],
+      description: '버튼의 종류 (색상/스타일)',
+    },
+    size: {
+      control: { type: 'radio' },
+      options: ['small', 'medium', 'large'],
+      description: '버튼의 크기',
+    },
     backgroundColor: { control: "color" },
     onClick: { action: "clicked" },
   },
   args: {
     onClick: () => {},
+    text: "Button", // Set default text here
   },
 } satisfies Meta<typeof Button>;
 
@@ -27,27 +38,30 @@ type Story = StoryObj<typeof meta>;
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
 export const Primary: Story = {
   args: {
-    primary: true,
-    label: "Button",
+    variant: "primary",
   },
 };
 
 export const Secondary: Story = {
   args: {
-    label: "Button",
+    variant: "secondary",
   },
 };
 
 export const Large: Story = {
   args: {
     size: "large",
-    label: "Button",
   },
 };
 
 export const Small: Story = {
   args: {
     size: "small",
-    label: "Button",
+  },
+};
+
+export const Medium: Story = {
+  args: {
+    size: "medium",
   },
 };
