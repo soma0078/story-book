@@ -18,10 +18,9 @@ export default defineConfig({
       scss: {
         // @use 문법을 사용하여 모든 SCSS 파일에 _variables.scss를 자동으로 포함시킵니다.
         // 'as *'를 사용하면 네임스페이스 없이 변수를 직접 사용할 수 있습니다.
-        additionalData: `@use "${path.resolve(
-          __dirname,
-          "src/styles/abstracts/_variables.scss"
-        )}" as *;`,
+        additionalData: `@use "${path
+          .resolve(__dirname, "src/styles/abstracts/_variables.scss")
+          .replace(/\\/g, "/")}" as *;`,
       },
     },
   },
