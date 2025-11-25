@@ -1,0 +1,18 @@
+// ==========================================================================
+// Global Stylesheet
+// ==========================================================================
+// This file imports all other SCSS partials in the correct order to
+// generate the final global CSS.
+
+// 1. Base styles (resets, typography, base element styles)
+@use "base/reset";
+@use "base/typography";
+@use "base/base";
+
+// 2. Layout styles (e.g., grid, header, footer)
+// Add layout files here as they are created.
+// Example: @use 'layout/grid';
+
+// 3. Component styles (global component styles, if any)
+// Add component files here as they are created.
+// Example: @use 'components/buttons';

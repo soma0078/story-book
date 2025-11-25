@@ -1,54 +1,134 @@
-$primary-color: #555ab9;
-$secondary-color: transparent;
-$text-color: #333;
-$white: white;
-$box-shadow-secondary: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
-
-$font-size-small: 12px;
-$font-size-medium: 14px;
-$font-size-large: 16px;
-
-$padding-small: 10px 16px;
-$padding-medium: 11px 20px;
-$padding-large: 12px 24px;
-
-$border-radius: 3em;
 $font-family-base: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 .button {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
+  gap: 4px;
   border: 0;
-  border-radius: $border-radius;
-  font-weight: 700;
   line-height: 1;
+  padding: 0 12px;
   font-family: $font-family-base;
 
-  // Variants
-  &--primary {
-    background-color: $primary-color;
-    color: $white;
+  &:disabled {
+    cursor: not-allowed;
   }
 
-  &--secondary {
-    box-shadow: $box-shadow-secondary;
-    background-color: $secondary-color;
-    color: $text-color;
+  // Variant: filled
+  &--filled {
+    &.button--primary {
+      background-color: $primary-50;
+      color: $gray-0;
+      &:active {
+        background-color: $primary-60;
+      }
+      &:disabled {
+        background-color: $primary-30;
+        color: $primary-20;
+      }
+    }
+
+    &.button--secondary {
+      background-color: $primary-10;
+      color: $primary-50;
+      &:active {
+        background-color: $primary-20;
+        color: $primary-60;
+      }
+      &:disabled {
+        background-color: $primary-10;
+        color: $primary-30;
+      }
+    }
+
+    &.button--gray {
+      background-color: $gray-20;
+      color: $gray-90;
+      &:active {
+        background-color: $gray-30;
+      }
+      &:disabled {
+        background-color: $gray-30;
+        color: $gray-50;
+      }
+    }
+  }
+
+  // Variant: lined
+  &--lined {
+    background-color: transparent;
+    border: 1px solid;
+    color: $gray-90;
+
+    &.button--primary {
+      border-color: $primary-50;
+      color: $primary-50;
+      &:active {
+        background-color: $primary-10;
+      }
+      &:disabled {
+        border-color: $primary-30;
+        color: $primary-30;
+      }
+    }
+
+    &.button--gray {
+      border-color: $gray-30;
+      color: $gray-70;
+      &:active {
+        background-color: $gray-10;
+      }
+      &:disabled {
+        color: $gray-50;
+      }
+    }
   }
 
   // Sizes
-  &--small {
-    padding: $padding-small;
-    font-size: $font-size-small;
+  &--xs {
+    height: 28px;
+    padding: 0 8px;
+    font-size: $font-size-12;
+    border-radius: $radius-6;
+    gap: 2px;
+  }
+  &--sm {
+    height: 32px;
+    font-size: $font-size-13;
+    border-radius: $radius-8;
+  }
+  &--md {
+    height: 40px;
+    font-size: $font-size-14;
+    font-weight: 600;
+    border-radius: $radius-8;
+  }
+  &--lg {
+    height: 48px;
+    font-size: $font-size-16;
+    font-weight: 600;
+    border-radius: $radius-8;
+  }
+  &--full {
+    height: 52px;
+    font-size: $font-size-18;
+    font-weight: 600;
+    width: 100%;
+    border-radius: $radius-12;
   }
 
-  &--medium {
-    padding: $padding-medium;
-    font-size: $font-size-medium;
+  // Icon Padding Adjustments
+  &.has-start-icon {
+    padding-left: 8px;
+    &.button--xs {
+      padding-left: 4px;
+    }
   }
-
-  &--large {
-    padding: $padding-large;
-    font-size: $font-size-large;
+  &.has-end-icon {
+    padding-right: 8px;
+    &.button--xs {
+      padding-right: 4px;
+    }
   }
 }
