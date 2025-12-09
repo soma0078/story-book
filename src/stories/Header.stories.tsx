@@ -9,9 +9,30 @@ const meta = {
     layout: "fullscreen",
   },
   argTypes: {
-    onLogin: { action: "onLogin" },
-    onLogout: { action: "onLogout" },
-    onCreateAccount: { action: "onCreateAccount" },
+    user: {
+      control: "object",
+      table: {
+        category: "State",
+      },
+    },
+    onLogin: {
+      action: "onLogin",
+      table: {
+        category: "Events",
+      },
+    },
+    onLogout: {
+      action: "onLogout",
+      table: {
+        category: "Events",
+      },
+    },
+    onCreateAccount: {
+      action: "onCreateAccount",
+      table: {
+        category: "Events",
+      },
+    },
   },
   args: {
     user: undefined,

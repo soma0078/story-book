@@ -33,24 +33,47 @@ const meta = {
     color: {
       control: { type: "radio" },
       options: ["primary", "secondary", "gray"],
+      table: {
+        category: "Appearance",
+      },
     },
     variant: {
       control: { type: "radio" },
       options: ["filled", "lined"],
+      table: {
+        category: "Appearance",
+      },
     },
     size: {
       control: { type: "select" },
       options: ["xs", "sm", "md", "lg", "full"],
+      table: {
+        category: "Appearance",
+      },
     },
     children: {
       control: "text",
+      table: {
+        category: "Content",
+      },
     },
-    onClick: { action: "clicked" },
+    onClick: {
+      action: "clicked",
+      table: {
+        category: "Events",
+      },
+    },
     startIcon: {
       control: false,
+      table: {
+        category: "Content",
+      },
     },
     endIcon: {
       control: false,
+      table: {
+        category: "Content",
+      },
     },
   },
   // Set default args for all stories
