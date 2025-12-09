@@ -10,9 +10,13 @@ $font-family-base: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
   line-height: 1;
   padding: 0 12px;
   font-family: $font-family-base;
+  transition: all 100ms;
 
   &:disabled {
     cursor: not-allowed;
+  }
+  &:active {
+    transform: scale(0.95);
   }
 
   // Variant: filled
