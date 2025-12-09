@@ -9,6 +9,8 @@ const preview: Preview = {
       },
     },
   },
+  // Enables auto-generated documentation for all stories: https://storybook.js.org/docs/writing-docs/autodocs
+  tags: ["autodocs"],
 };
 
 export default preview;

@@ -22,6 +22,7 @@ const meta = {
       ],
     },
   },
+  tags: ["!autodocs"], // Disable auto-generated documentation for this component
 } satisfies Meta<typeof CustomButton>;
 
 export default meta;

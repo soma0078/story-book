@@ -29,7 +29,6 @@ const meta = {
   parameters: {
     layout: "centered",
   },
-  tags: ["autodocs"],
   argTypes: {
     color: {
       control: { type: "radio" },
