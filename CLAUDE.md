@@ -15,7 +15,7 @@ src/styles/         # 전역 스타일
 - Headless UI / Radix UI로 동작과 접근성을 처리하고, 스타일만 Tailwind 클래스로 덮어쓴다.
 - Props 인터페이스는 파일 상단에 명시적으로 선언한다.
 - `children`, `className`, `ref` 같은 표준 HTML Props는 별도 선언 없이 spread로 통과시킨다.
-- 조건부 클래스는 `clsx`를 사용합니다. 인라인 `style={{}}` 사용 금지.
+- 클래스 조합은 `cn` 유틸(`src/lib/utils.ts`)을 사용한다. variant 조합은 `cva`. 인라인 `style={{}}` 사용 금지.
 - 반복되는 클래스 조합은 컴포넌트로 추출한다. `className` 문자열을 여러 곳에 복붙하지 않는다.
 
 ## Story 작성 규칙

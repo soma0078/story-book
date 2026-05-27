@@ -1,5 +1,5 @@
 import { cva, type VariantProps } from "class-variance-authority";
-import clsx from "clsx";
+import { cn } from "../lib/utils";
 
 const button = cva(
   [
@@ -82,12 +82,10 @@ export const Button = ({
   return (
     <button
       type="button"
-      className={clsx(
+      className={cn(
         button({ variant, color, size }),
-        startIcon && size === "xs" && "pl-1",
-        startIcon && size !== "xs" && "pl-2",
-        endIcon && size === "xs" && "pr-1",
-        endIcon && size !== "xs" && "pr-2",
+        startIcon && (size === "xs" ? "pl-1" : "pl-2"),
+        endIcon && (size === "xs" ? "pr-1" : "pr-2"),
         className
       )}
       {...props}
