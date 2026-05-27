@@ -10,6 +10,7 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
+    "test": "vitest --project=storybook",
     "chromatic": "npx chromatic --project-token=chpt_6c7145ab7b5fec1"
   },
   "dependencies": {
@@ -26,6 +27,7 @@
     "@chromatic-com/storybook": "5.2.1",
     "@storybook/addon-a11y": "^10.4.1",
     "@storybook/addon-docs": "^10.4.1",
+    "@storybook/addon-vitest": "^10.4.1",
     "@storybook/react": "^10.4.1",
     "@storybook/react-vite": "^10.4.1",
     "@types/node": "^25.9.1",
@@ -34,6 +36,8 @@
     "@typescript-eslint/eslint-plugin": "^8.60.0",
     "@typescript-eslint/parser": "^8.60.0",
     "@vitejs/plugin-react": "^6.0.2",
+    "@vitest/browser-playwright": "^4.1.7",
+    "@vitest/coverage-v8": "^4.1.7",
     "chromatic": "^17.0.1",
     "depcheck": "^1.4.7",
     "eslint": "^9.39.4",
@@ -41,10 +45,12 @@
     "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-react-refresh": "^0.5.2",
     "eslint-plugin-storybook": "^10.4.1",
+    "playwright": "^1.60.0",
     "sass": "^1.100.0",
     "storybook": "^10.4.1",
     "typescript": "^6.0.3",
     "vite": "^8.0.14",
-    "vite-plugin-svgr": "^5.2.0"
+    "vite-plugin-svgr": "^5.2.0",
+    "vitest": "^4.1.7"
   }
 }
